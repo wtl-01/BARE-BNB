@@ -1,0 +1,292 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+}
+
+.nav_sign_up,
+.nav_sign_in {
+  margin-left: -150px;
+  margin-right: -150px;
+}
+
+.signup_container {
+  margin-top: 50px;
+  background-color: white;
+  padding: 40px;
+  border-radius: 15px;
+}
+
+.signin_container {
+  margin-top: 120px;
+  background-color: white;
+  padding: 40px;
+  border-radius: 15px;
+}
+
+.button_format_sign_in,
+.button_format_sign_up {
+  background-color: #ff5a5f;
+  border-color: #ff5a5f;
+}
+
+.button_format_sign_in:hover,
+.button_format_sign_up:hover {
+  background-color: #ff5a5f;
+  border-color: #ff5a5f;
+}
+
+.btn-success:active:focus {
+  background-color: #00a699;
+  border-color: #00a699;
+}
+
+.img_profile_container {
+  text-align: center;
+}
+
+.image_profile {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.update_profile_picture {
+  margin-top: 15px;
+}
+
+.update_profile_picture_link,
+.host_pending_reservation_view_property_link {
+  color: black;
+}
+
+.legal_name_profile {
+  margin-top: 15px;
+}
+
+.actual_legal_name_profile,
+.email_profile,
+.phone_number_profile {
+  margin-top: -15px;
+}
+
+.legal_name_summary,
+.email_address_summary,
+.phone_number_summary,
+.host_pending_reservation_summary,
+.host_pending_reservation_special_request {
+  list-style-type: none;
+}
+
+.save_button_profile {
+  margin-top: 10px;
+}
+
+#back_button_update_photo {
+  margin-top: 10px;
+}
+
+footer {
+  color: grey;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  position: sticky;
+  top: 100%;
+  border: 1px solid lightgray;
+}
+
+.host_reservation_request_button_approve {
+  background-color: white;
+  border-color: #ff5a5f;
+  color: #ff5a5f;
+  border: 2px solid;
+}
+
+.host_reservation_request_button_approve:hover {
+  background-color: #ff5a5f;
+  border-color: #ff5a5f;
+}
+
+.host_reservation_request_button_approve:active:focus {
+  background-color: white;
+  border-color: #ff5a5f;
+  color: #ff5a5f;
+}
+
+.host_reservation_request_button_decline {
+  background-color: white;
+  border-color: #484848;
+  color: #484848;
+  border: 2px solid;
+}
+
+.host_reservation_request_button_decline:hover {
+  background-color: #484848;
+  border-color: #484848;
+}
+
+.host_reservation_request_button_decline:active:focus {
+  background-color: white;
+  border-color: #484848;
+  color: #484848;
+}
+
+.next_btn_format_host_pending_reservation {
+  background-color: #484848;
+  border-color: #484848;
+  float: right;
+}
+
+.next_btn_format_host_pending_reservation:hover {
+  background-color: #000000;
+  border-color: #000000;
+}
+
+.next_btn_format_host_pending_reservation:active:focus {
+  background-color: #484848;
+  border-color: #484848;
+}
+
+.prev_btn_format_host_pending_reservation {
+  background-color: #484848;
+  border-color: #484848;
+}
+
+.prev_btn_format_host_pending_reservation:hover {
+  background-color: #000000;
+  border-color: #000000;
+}
+
+.prev_btn_format_host_pending_reservation:active:focus {
+  background-color: #484848;
+  border-color: #484848;
+}
+
+.text-container {
+  display: inline-block;
+  width: 50%;
+  vertical-align: top;
+}
+
+.host_pending_reservation_customer_profile_link {
+  color: black;
+  margin-left: 5px;
+}
+
+.refresh_btn_host_pending_reservation {
+  background-color: white;
+  border-color: #00a699;
+  color: #00a699;
+  border: 2px solid;
+}
+
+.refresh_btn_host_pending_reservation:hover {
+  background-color: #00a699;
+  border-color: #00a699;
+}
+
+.refresh_btn_host_pending_reservation:active:focus {
+  background-color: white;
+  border-color: #00a699;
+  color: #00a699;
+}
+
+.customer_viewable_profile_review_button {
+  background-color: white;
+  border-color: #ff5a5f;
+  color: #ff5a5f;
+  border: 2px solid;
+}
+
+.customer_viewable_profile_review_button:hover {
+  background-color: #ff5a5f;
+  border-color: #ff5a5f;
+}
+
+.customer_viewable_profile_review_button:active:focus {
+  background-color: white;
+  border-color: #ff5a5f;
+  color: #ff5a5f;
+}
+
+.customer_viewable_profile_all_reviews_button {
+  background-color: white;
+  border-color: #484848;
+  color: #484848;
+  border: 2px solid;
+}
+
+.customer_viewable_profile_all_reviews_button:hover {
+  background-color: #484848;
+  border-color: #484848;
+}
+
+.customer_viewable_profile_all_reviews_button:active:focus {
+  background-color: white;
+  border-color: #484848;
+  color: #484848;
+}
+
+.customer_viewable_profile_host_pics {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+}
+
+hr {
+  background-color: black;
+}
+
+.customer_viewable_profile_textarea {
+  width: 100%;
+}
+
+.user_present_reservations_btn_cancel {
+  background-color: white;
+  border-color: #484848;
+  color: #484848;
+  border: 2px solid;
+}
+
+.user_present_reservations_btn_cancel:hover {
+  background-color: #484848;
+  border-color: #484848;
+}
+
+.user_present_reservations_btn_cancel:active:focus {
+  background-color: white;
+  border-color: #484848;
+  color: #484848;
+}
+
+@media (max-width: 767.11px) {
+  .reservation_card_title {
+    font-size: 15px;
+  }
+  .reservation_card_location {
+    font-size: 13px;
+  }
+  .host_pending_reservation_details {
+    font-size: 13px;
+  }
+  .refresh_btn_host_pending_reservation {
+    font-size: 13px;
+  }
+  .main_title_host_pending_reservation {
+    font-size: 20px;
+  }
+
+  .host_reservation_request_button_approve {
+    font-size: 12px;
+  }
+  .host_reservation_request_button_decline {
+    font-size: 12px;
+  }
+}

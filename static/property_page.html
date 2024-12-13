@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="home_page_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="lightbox.min.css">
+    <script type="text/javascript" src="lightbox-plus-jquery.min.js"></script>
+
+</head>
+<body>
+
+    <!-- The header -->
+    <div class="container header">
+        <nav class="navbar navbar-expand-md">
+            <a href="index.html" class="navbar-brand">
+                <img src="images/logo.png" alt="Restify logo" width="60" height="40" class="d-inline-block align-bottom">
+                <span style="color: #ff5a5f; font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif; font-weight: bold;">
+                    Restify
+                </span>
+            </a>
+
+            <span class="dropdown2">
+                <input type="text" name="" placeholder="Search" class="home_page_search form-inline">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <div class="dropdown-content2" style="width: 300px;">
+                    <div style="margin-left: 10px; margin-top: 20px; margin-bottom: 20px;">
+                    Region: 
+                    <select id="region-select" style="border-radius: 0.5em;">
+                        <option value="anywhere">Anywhere</option>
+                        <option value="europe">Europe</option>
+                        <option value="united-states">United States</option>
+                        <option value="south-america">South America</option>
+                        <option value="mexico">Mexico</option>
+                        <option value="caribbean">Caribbean</option>
+                        <option value="caribbean">East Asia</option>
+                      </select>
+                      <script>
+                          document.getElementById("region-select").value
+                      </script>
+                    </div>
+                    <div style="margin-left: 10px; margin-top: 20px; margin-bottom: 20px;">
+                        <label for="start-date">Start Date:</label>
+                        <input type="date" id="start-date" style="border-radius: 0.5em; border-width: thin;">      
+                    </div>
+                    <div style="margin-left: 10px; margin-top: 20px; margin-bottom: 20px;">
+                        <label for="start-date">End Date:</label>
+                        <input type="date" id="start-date" style="border-radius: 0.5em; border-width: thin;">        
+                    </div>
+  
+                    <div style="margin-left: 10px; margin-top: 20px; margin-bottom: 20px;">
+                        Order By: 
+                        <select id="region-select" style="border-radius: 0.5em;">
+                            <option value="anywhere">Random</option>
+                            <option value="europe">Highest Price</option>
+                            <option value="europe">Lowest Price</option>
+                            <option value="united-states">Rating</option>
+                            <option value="south-america">Popularity</option>
+                          </select>
+                          <script>
+                              document.getElementById("region-select").value
+                          </script>
+                        </div>
+  
+                    <button id="myButton" style="margin-bottom: 20px; border-radius: 0.5em; width: 200px; margin-left: 30px;"><a href="ordered_property_after.html" style="text-decoration: none;"> <i class="fa-solid fa-magnifying-glass"></i> Apply Filters</a></button>
+  
+                </div>
+            </span>
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#toggleMobileMenu"
+                aria-controls="toggleMobileMenu"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="toggleMobileMenu">
+                <ul class="navbar-nav ms-auto text-center">
+                    <li>
+                        <a class="nav-link" href="sign_up.html">Sign Up</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="sign_in.html">Log In</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <hr id="horizontal_line_1_home_page">
+
+    <!-- main -->
+    <main>
+
+    <h3 class="property_photo_text1" style="color: grey;">Valencia, Spain</h3>
+    <div>
+    <h2 class="property_photo_text2">
+         Spanish Mediterranean Retreat
+    </h2>
+    </div>
+
+    <div style="display: flex; align-items: center; height: 50px;">
+        <img src="images/five_stars.png" alt="your-image-alt" style="height: 25px; margin-left: 30px;">
+        <a href="#reviews" style="margin-left: 5px; color: black;">4 reviews</a>
+      </div>
+
+    <div class="gallery">
+        <a href="images/interior1.png" data-lightbox="mygallery"><img src="images/interior1.png" height="200px" style="margin-left: 30px; margin-top: 20px; border-radius: 20px;"></a>
+        <a href="images/interior2.png" data-lightbox="mygallery"><img src="images/interior2.png" height="200px" style="margin-left: 30px; margin-top: 20px; border-radius: 20px;"></a>
+        <a href="images/interior3.png" data-lightbox="mygallery"><img src="images/interior3.png" height="200px" style="margin-left: 30px; margin-top: 20px; border-radius: 20px;"></a>
+        <a href="images/interior4.png" data-lightbox="mygallery"><img src="images/interior4.png" height="200px" style="margin-left: 30px; margin-top: 20px; border-radius: 20px;"></a>
+        <a href="images/interior5.png" data-lightbox="mygallery"><img src="images/interior5.png" height="200px" style="margin-left: 30px; margin-top: 20px; border-radius: 20px;"></a>
+    </div>
+
+    <button id="myButton" class="host_reservation_request_button_approve">Book Now</button>
+    <span id="myText" style="display: none; margin-left: 30px; margin-top: 5px; color: grey;">You must be a registered user to book. Please sign in or create a Restify account to continue.</span>
+    <script src="disappear.js"></script>
+
+    <div class="host_info" style="margin-top: 20px; margin-left: 30px;">
+        <img src="images/spanish.jpg" style="height: 40px; width: 40px; border-radius: 50%;">
+        <span style="margin-left: 10px;">Hosted by Alfonzo S.</span>
+        <i class="fa fa-envelope" aria-hidden="true" style="margin-left: 10px;"></i>
+        <a class= "email" href="mailto:alphonzograciassaz@gmail.com?subject=Inquiry&body=I would like to inquire about this property" style="color: black;">alphonzograciassaz@gmail.com</a>  
+        <i class="fa fa-phone" aria-hidden="true" style="margin-left: 10px;"></i>
+        <span>647-901-1633</span>
+    </div>
+
+    <div class="about_section" style="margin-top: 20px; margin-left: 30px;">
+        <h3>About This Property</h3>
+        <span style="color: grey; font-weight: 100;">2 guests &middot; 1 bedroom &middot; 1 bed &middot; 1 bath</span>
+
+        <div style="margin-top: 10px;">
+            <i class="fa fa-calendar"></i>
+            <span style="font-weight: 500; margin-left: 5px;">Free cancellation for 48 hours.</span>
+        </div>
+
+        <div style="margin-top: 10px;">
+            <i class="fa fa-door-open"></i>
+            <span style="font-weight: 500; margin-left: 5px;">Self check-in.</span>
+        </div>
+        <div style="margin-top: 10px;">
+            <i class="fa-solid fa-house-laptop"></i>
+            <span style="font-weight: 500; margin-left: 5px;">Dedicated workspace.</span>
+        </div>
+
+        <div class="Amenities" style="margin-top: 20px;">
+            <h6 style="color: grey;">Amenities</h6>
+            <span>
+                <i class="fa-solid fa-kitchen-set"></i>
+                <span>Kitchen</span>
+            </span>
+            <span style="margin-left: 20px">
+                <i class="fa-solid fa-wifi"></i>
+                <span>Wifi</span> 
+            </span>
+            <span style="margin-left: 20px;">
+                <i class="fa-solid fa-car"></i>
+                <span>Free parking</span>
+            </span>
+            <span style="margin-left: 20px;">
+                <i class="fa-solid fa-sink"></i>
+                <span>Bathroom essentials</span>
+            </span>
+            <span style="margin-left: 20px;">
+                <i class="fa-solid fa-tv"></i>
+                <span>HDTV</span>
+            </span>
+
+        </div>
+
+        <h6 style="margin-top: 20px; font-weight: 500; color:grey">Property Description</h6>
+        <p style="margin-top: px;">This Spanish retreat is located only 5 kilometers from the center of Valencia. Located near the 
+        beach, you can enjoy the hot sun while swimming in the beautiful blue ocean. The property is also located near many restaurants,
+    enjoy Spanish cuisine such as Tapas and many more. Valencia is a city known for its architecture, culture, and rich history. There
+    is an endless amount of things that you can do there, sightseeing, eating, walking, going to the beach, the possibilities are endless.
+     The property itself has Moorish influence and has the design of a mosque's interior as a homage to Spain's Islamic past. The property
+    comes with 1 bedroom and 1 bathroom and is suitable for 2 guests, perfect for a couple's honeymoon!</p>
+
+    </div>
+
+    <div id="reviews" style="margin:30px;">
+        <h3>Reviews</h3>
+        <div style="border: 1px solid lightgray; border-radius: 10px;"> 
+
+            <div style="margin-left: 20px; margin-top: 20px; margin-bottom: 20px;">
+                <i class="fa-sharp fa-solid fa-2x fa-star"></i>
+                <span style="font-size: 30px;">5 Stars &middot 4 Reviews</span>
+            </div>
+                <div>
+                <span style="margin-left: 20px;">Cleanliness <span style="font-weight: bold;">5.0</span></span> 
+                <div class="progress-bar" style="background-color: black;width: 250px;height: 10px;border-radius: 5px; margin-left: 20px;">
+                </div>
+                </div>
+
+                <div style="margin-top: 10px;">
+                <span style="margin-left: 20px;"> Accuracy <span style="font-weight: bold;">5.0</span></span>
+                <div class="progress-bar" style="background-color: black;width: 250px;height: 10px;border-radius: 5px; margin-left: 20px;">
+                </div>
+                </div>
+
+                <div style="margin-top: 10px;">
+                <span style="margin-left: 20px;">Communication <span style="font-weight: bold;">5.0</span></span> 
+                <div class="progress-bar" style="background-color: black;width: 250px;height: 10px;border-radius: 5px; margin-left: 20px;">
+                </div>
+                </div>
+
+                <div style="margin-top: 10px;">
+                <span style="margin-left: 20px;"> Location <span style="font-weight: bold;">5.0</span></span>
+                <div class="progress-bar" style="background-color: black;width: 250px;height: 10px;border-radius: 5px; margin-left: 20px;">
+                </div>
+                </div>
+
+                <div style="margin-top: 10px;">
+                <span style="margin-left: 20px;">Check-in <span style="font-weight: bold;">5.0</span></span> 
+                <div class="progress-bar" style="background-color: black;width: 250px;height: 10px;border-radius: 5px; margin-left: 20px;">
+                </div>
+                </div>
+
+                <div style="margin-top: 10px; margin-bottom: 40px;">
+                <span style="margin-left: 20px;"> Value <span style="font-weight: bold;">5.0</span></span>
+                <div class="progress-bar" style="background-color: black;width: 250px;height: 10px;border-radius: 5px; margin-left: 20px;">
+                </div>
+                </div>
+                
+                <!-- These are the reviews -->
+                <div class="row" style="margin-left: 10px; margin-bottom: 10px;">
+                    <div class="col-md-6" style="margin-top: 10px;">
+                        <img src="images/random_person1.jpg" style="height: 40px; width: 40px; border-radius: 50%;">
+                        <span style="margin-left: 10px;">
+                            Edward
+                        </span>
+                        <span style="color: grey; font-size: 15px; margin-left: 5px;">
+                            January 1, 2023
+                        </span>
+                        <div style="margin-top: 10px;">
+                            This place was fantastic! I came here with my brother (who is kind of oversized haha).
+                            But overall, this place was a great break from all the alchemy we have been doing. 
+                            Alchemy training has been tough lately but this location helped me and my brother get 
+                            the relaxation we have been long waiting for! This place was so fun that we are now
+                            in a good mood to fight our enemies!
+                        </div>
+                    </div>
+                    <div class="col-md-6" style="margin-top: 10px;">
+                        <img src="images/random_person2.jpg" style="height: 40px; width: 40px; border-radius: 50%;">
+                        <span style="margin-left: 10px;">
+                            Goku
+                        </span>
+                        <span style="color: grey; font-size: 15px; margin-left: 5px;">
+                            January 2, 2023
+                        </span>
+                        <div style="margin-top: 10px; margin-right: 10px;">
+                            After a long day fighting Frieza and Vegeta, I can finally relax at this location.
+                            Collecting dragon balls aint easy you know haha. I came here with my wife now
+                            that our son Gohan is now all grown up. Oh boy, this was an amazing location!
+                            It almost feels like Master Roshi's beach house back in the day, ah the memories! 
+                            Will definitely come back soon!
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row" style="margin-left: 10px; margin-bottom: 20px;">
+                    <div class="col-md-6">
+                        <img src="images/random_person3.jpg" style="height: 40px; width: 40px; border-radius: 50%;">
+                        <span style="margin-left: 10px;">
+                            Asuna
+                        </span>
+                        <span style="color: grey; font-size: 15px; margin-left: 5px;">
+                            January 3, 2023
+                        </span>
+                        <div style="margin-top: 10px;">
+                            I came here with my true love Kirito. After we escaped Sword Art Online we decided
+                            to go on vacation here to clear our minds. This was an amazing decision as we had
+                            the time of our lives! I hope to go on more trips like these with Kirito in the 
+                            future and will use this property as a benchmark!
+                        </div>
+                    </div>
+                    <div class="col-md-6" style="margin-top: 10px;">
+                        <img src="images/random_person4.jpg" style="height: 40px; width: 40px; border-radius: 50%;">
+                        <span style="margin-left: 10px;">
+                            Kawaii12
+                        </span>
+                        <span style="color: grey; font-size: 15px; margin-left: 5px;">
+                            February 1, 2023
+                        </span>
+                        <div style="margin-top: 10px; margin-right: 10px;">
+                            UWUWUWUWUWUWUW I loved this place so matchiiiii. Will def be here with my boyfwend
+                            next time :33333. Fun fun fun fun fun fun fun fun fun fun fun fun!!!!!!! I loveee
+                            the tropics, it gets too cold in Japan y'know!
+                        </div>
+                    </div>
+                </div>
+           
+                </div>
+                </div>
+
+    </main>
+
+    <!-- The footer -->
+    <footer style="margin-top: 20px;">  
+        <p>Copyright Restify 2023.</p>  
+    </footer>  
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    
+</body>
+</html>

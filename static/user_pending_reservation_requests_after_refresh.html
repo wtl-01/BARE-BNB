@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+    <!-- CSS file -->
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="stylesheet" href="header_style.css">
+    
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  </head>
+  <body>
+
+    <div class="container header">
+      <nav class="navbar navbar-expand-lg">
+          <a href="home_page_after.html" class="navbar-brand">
+              <img src="images/logo.png" alt="Restify logo" width="60" height="40" class="d-inline-block align-bottom">
+              <span style="color: #ff5a5f; font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif; font-weight: bold;">
+                  Restify
+              </span>
+          </a>
+
+          <span class="dropdown2">
+              <input type="text" name="" placeholder="Search" class="home_page_search form-inline">
+              <i class="fa fa-search" aria-hidden="true"></i>
+              <div class="dropdown-content2" style="width: 300px;">
+                  <div style="margin-left: 10px; margin-top: 20px; margin-bottom: 20px;">
+                  Region: 
+                  <select id="region-select" style="border-radius: 0.5em;">
+                      <option value="anywhere">Anywhere</option>
+                      <option value="europe">Europe</option>
+                      <option value="united-states">United States</option>
+                      <option value="south-america">South America</option>
+                      <option value="mexico">Mexico</option>
+                      <option value="caribbean">Caribbean</option>
+                      <option value="caribbean">East Asia</option>
+                    </select>
+                    <script>
+                        document.getElementById("region-select").value
+                    </script>
+                  </div>
+                  <div style="margin-left: 10px; margin-top: 20px; margin-bottom: 20px;">
+                      <label for="start-date">Start Date:</label>
+                      <input type="date" id="start-date" style="border-radius: 0.5em; border-width: thin;">      
+                  </div>
+                  <div style="margin-left: 10px; margin-top: 20px; margin-bottom: 20px;">
+                      <label for="start-date">End Date:</label>
+                      <input type="date" id="start-date" style="border-radius: 0.5em; border-width: thin;">        
+                  </div>
+
+                  <div style="margin-left: 10px; margin-top: 20px; margin-bottom: 20px;">
+                      Order By: 
+                      <select id="region-select" style="border-radius: 0.5em;">
+                          <option value="anywhere">Random</option>
+                          <option value="europe">Highest Price</option>
+                          <option value="europe">Lowest Price</option>
+                          <option value="united-states">Rating</option>
+                          <option value="south-america">Popularity</option>
+                        </select>
+                        <script>
+                            document.getElementById("region-select").value
+                        </script>
+                      </div>
+
+                  <button id="myButton" style="margin-bottom: 20px; border-radius: 0.5em; width: 200px; margin-left: 30px;"><a href="ordered_property_after.html" style="text-decoration: none;"> <i class="fa-solid fa-magnifying-glass"></i> Apply Filters</a></button>
+
+              </div>
+          </span>
+
+          <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#toggleMobileMenu"
+              aria-controls="toggleMobileMenu"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+          >
+              <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="toggleMobileMenu">
+              <span class="navbar-nav ms-auto text-center">
+                  <!-- profile edit -->
+                  <span class="dropdown2">
+                      <a href="#"><img src="images/random_guy.jpg" style="border-radius: 50%; width: 40px; height: 40px; margin-right: 10px;"></a>
+                      <div class="dropdown-content2">
+                          <div style="margin-bottom: 5px;">JackSmith12, Host</div>
+                          <img src="images/random_guy.jpg" style="border-radius: 50%; width: 100px; height: 100px; margin-bottom: 10px;">
+                          <div style="color: gray">Toronto, Ontario</div>
+                          <div style="color: gray">Jacksmith12@gmail.com</div>
+                          <div style="margin-top: 10px; margin-bottom: 10px;">Hi, I'm Jack! I own several properties across the GTA, please, be my guest!</div>
+                          <a href="demo_persons_profile.html"><i class="fa-solid fa-user"></i> <div>Edit Profile</div></a>
+                      </div>
+                  </span>
+                  <!-- property list -->
+                  <span style="margin-left: 20px; margin: 10px;">
+                      <a href="user_management_page.html" style="font-weight: lighter; text-decoration: none; color: gray;"><i class="fa-solid fa-house" style="color:#ff5a5f;"></i> Dashboard</a>
+                  </span>
+                  <!-- notifications -->
+                      <span class="dropdown" style="margin-left: 20px; margin: 10px;">
+                          <a href="#" style="font-weight: lighter; text-decoration: none; color:gray"><i class="fa-solid fa-bell" style="color: #ff5a5f;"></i> Notifications</a>
+                          <div class="dropdown-content">
+                              <a href="property_page_after_approved.html"><i class="fa-solid fa-square-check"></i><div>Your reservation of Hawaii Home has been approved!</div></a>
+                              <a href="host_property_page_after.html#reviews"><i class="fa-solid fa-comment"></i><div>Edward recently commented on Oakville Home</div></a>
+                              <a href="host_property_page_after.html#reviews"><i class="fa-solid fa-comment"></i><div>Asuna recently commented on Oakville Home</div></a>
+                              <a href="host_pending_reservation_requests.html"><i class="fa-solid fa-calendar"></i><div>Bob wants to reserve your property Oakville Home</div></a>
+                          </div>
+                      </span>
+                      <!-- logout -->
+                      <span style="margin-left: 20px; margin: 10px;">
+                          <a href="index.html" style="font-weight: lighter; text-decoration: none; color: gray;"><i class="fa-solid fa-right-from-bracket" style="color: #ff5a5f;"></i> Log Out</a>
+                      </span>
+              </span>
+          </div>
+      </nav>
+  </div>
+
+  <hr id="horizontal_line_1_home_page">
+
+
+
+    <main>
+      <div
+        class="container d-flex align-items-center justify-content-center"
+        style="min-height: 100vh; height: 100%"
+      >
+        <div class="container">
+          <div
+            class="fs-2 fw-bold d-flex align-items-center justify-content-evenly"
+          >
+            <p class="main_title_host_pending_reservation">
+              Pending Reservation Requests
+            </p>
+            <a
+              href="user_pending_reservation_requests_after_refresh.html"
+              class="btn btn-primary fw-semibold refresh_btn_host_pending_reservation"
+              >Refresh</a
+            >
+          </div>
+          <div
+            class="container d-flex align-items-center justify-content-center"
+          >
+            <div class="card-deck w-75">
+              <div class="card w-100 mb-4">
+                <div class="card-body d-flex justify-content-between">
+                  <div>
+                    <h5
+                      class="card-title font-weight-bold reservation_card_title"
+                    >
+                      Spanish Mediterranean Retreat
+                    </h5>
+                    <h6 class="reservation_card_location">
+                      Location: Valencia, Spain
+                    </h6>
+                    <a
+                      class="fw-semibold host_pending_reservation_view_property_link"
+                      href="property_page_after_pending.html"
+                      >View property</a
+                    >
+                    <details class="mt-2 host_pending_reservation_details">
+                      <summary
+                        class="fw-semibold text-decoration-underline host_pending_reservation_summary"
+                      >
+                        See details
+                      </summary>
+                      <ul class="list-group">
+                        <li class="list-group-item">
+                          Host Name: Alfonzo Gracia-Saz
+                          <a
+                            class="fw-semibold host_pending_reservation_customer_profile_link"
+                            href="customer_viewable_profile_cannot_review.html"
+                            ><i class="fa fa-user fa-lg" aria-hidden="true"></i
+                          ></a>
+                        </li>
+                        <li class="list-group-item">
+                          Request date: 8 February 2023, 6:15 PM
+                        </li>
+                        <li class="list-group-item">
+                          Dates requested: 9 March 2023 - 12 March 2023
+                        </li>
+                        <li class="list-group-item">
+                          Special accommodation Request:
+                          <ul class="host_pending_reservation_special_request">
+                            <li>
+                              <i
+                                class="fa fa-wheelchair fa-lg"
+                                aria-hidden="true"
+                              ></i>
+                              - Wheelchair user
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="list-group-item">
+                          Special notes from customer:
+                          <ul class="host_pending_reservation_special_request">
+                            <li>
+                              Requesting approval for service dog to be present
+                              during stay.
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="list-group-item">
+                          <i class="fa fa-check fa-lg" aria-hidden="true"></i>
+                          Customers are aware of 3:00 PM check-in and 11:00 AM
+                          check-out policy
+                        </li>
+                      </ul>
+                    </details>
+                  </div>
+                  <div>
+                    <a
+                      href="#"
+                      class="btn btn-primary host_reservation_request_button_decline"
+                      id="host_existing_reservation_btn_decline1"
+                      style="padding: 8px"
+                      >Cancel</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="card w-100 mb-4">
+                <div class="card-body d-flex justify-content-between">
+                  <div>
+                    <h5
+                      class="card-title font-weight-bold reservation_card_title"
+                    >
+                      Belmond Hotel Caruso seasons
+                    </h5>
+                    <h6 class="reservation_card_location">
+                      Location: Ravello, Italy
+                    </h6>
+                    <a
+                      class="fw-semibold host_pending_reservation_view_property_link"
+                      href="property_page_after_pending.html"
+                      >View property</a
+                    >
+                    <details class="mt-2 host_pending_reservation_details">
+                      <summary
+                        class="fw-semibold text-decoration-underline host_pending_reservation_summary"
+                      >
+                        See details
+                      </summary>
+                      <ul class="list-group">
+                        <li class="list-group-item">
+                          Host Name: Orion Wolf
+                          <a
+                            class="fw-semibold host_pending_reservation_customer_profile_link"
+                            href="customer_viewable_profile_cannot_review.html"
+                            ><i class="fa fa-user fa-lg" aria-hidden="true"></i
+                          ></a>
+                        </li>
+                        <li class="list-group-item">
+                          Request date: 18 January 2023, 4:01 AM
+                        </li>
+                        <li class="list-group-item">
+                          Dates requested: 3 March 2023 - 5 March 2023
+                        </li>
+                        <li class="list-group-item">
+                          Special accommodation Request:
+                          <ul class="host_pending_reservation_special_request">
+                            <li>
+                              <i
+                                class="fa fa-wheelchair fa-lg"
+                                aria-hidden="true"
+                              ></i>
+                              - Wheelchair user
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="list-group-item">
+                          Special notes from customer:
+                          <ul class="host_pending_reservation_special_request">
+                            <li>
+                              Requesting approval for service dog to be present
+                              during stay.
+                            </li>
+                            <li>
+                              Requesting check-out at 1:00 PM instead of 11:00
+                              AM.
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </details>
+                  </div>
+                  <div>
+                    <a
+                      href="#"
+                      class="btn btn-primary host_reservation_request_button_decline"
+                      id="host_existing_reservation_btn_decline3"
+                      style="padding: 8px"
+                      >Cancel</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="card w-100 mb-4">
+                <div class="card-body d-flex justify-content-between">
+                  <div>
+                    <h5
+                      class="card-title font-weight-bold reservation_card_title"
+                    >
+                      The St. Regis Bali Resort
+                    </h5>
+                    <h6 class="reservation_card_location">
+                      Location: Bali, Indonesia
+                    </h6>
+                    <a
+                      class="fw-semibold host_pending_reservation_view_property_link"
+                      href="property_page_after_pending.html"
+                      >View property</a
+                    >
+                    <details class="mt-2 host_pending_reservation_details">
+                      <summary
+                        class="fw-semibold text-decoration-underline host_pending_reservation_summary"
+                      >
+                        See details
+                      </summary>
+                      <ul class="list-group">
+                        <li class="list-group-item">
+                          Host Name: Callum Blaze
+                          <a
+                            class="fw-semibold host_pending_reservation_customer_profile_link"
+                            href="customer_viewable_profile_cannot_review.html"
+                            ><i class="fa fa-user fa-lg" aria-hidden="true"></i
+                          ></a>
+                        </li>
+                        <li class="list-group-item">
+                          Request date: 28 January 2023, 3:50 AM
+                        </li>
+                        <li class="list-group-item">
+                          Dates requested: 7 March 2023 - 9 March 2023
+                        </li>
+                        <li class="list-group-item">
+                          Special accommodation Request: None
+                        </li>
+                        <li class="list-group-item">
+                          Special notes from customer:
+                          <ul class="host_pending_reservation_special_request">
+                            <li>Requesting toddler safe environment.</li>
+                            <li>
+                              Requesting check-in at 1:00 PM instead of 3:00 PM.
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </details>
+                  </div>
+                  <div>
+                    <a
+                      href="#"
+                      class="btn btn-primary host_reservation_request_button_decline"
+                      id="host_existing_reservation_btn_decline4"
+                      style="padding: 8px"
+                      >Cancel</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="card w-100 mb-4">
+                <div class="card-body d-flex justify-content-between">
+                  <div>
+                    <h5
+                      class="card-title font-weight-bold reservation_card_title"
+                    >
+                      The Peninsula Hotel de Lise
+                    </h5>
+                    <h6 class="reservation_card_location">
+                      Location: London, UK
+                    </h6>
+                    <a
+                      class="fw-semibold host_pending_reservation_view_property_link"
+                      href="property_page_after_pending.html"
+                      >View property</a
+                    >
+                    <details class="mt-2 host_pending_reservation_details">
+                      <summary
+                        class="fw-semibold text-decoration-underline host_pending_reservation_summary"
+                      >
+                        See details
+                      </summary>
+                      <ul class="list-group">
+                        <li class="list-group-item">
+                          Host Name: Ronin Hunter
+                          <a
+                            class="fw-semibold host_pending_reservation_customer_profile_link"
+                            href="customer_viewable_profile_cannot_review.html"
+                            ><i class="fa fa-user fa-lg" aria-hidden="true"></i
+                          ></a>
+                        </li>
+                        <li class="list-group-item">
+                          Request date: 8 January 2023, 8:10 AM
+                        </li>
+                        <li class="list-group-item">
+                          Dates requested: 9 March 2023 - 11 March 2023
+                        </li>
+                        <li class="list-group-item">
+                          Special accommodation Request:
+                          <ul class="host_pending_reservation_special_request">
+                            <li>
+                              <i
+                                class="fa fa-deaf fa-lg"
+                                aria-hidden="true"
+                              ></i>
+                              - Hard of hearing
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="list-group-item">
+                          Special notes from customer: None
+                        </li>
+                        <li class="list-group-item">
+                          <i class="fa fa-check fa-lg" aria-hidden="true"></i>
+                          Customers are aware of 3:00 PM check-in and 11:00 AM
+                          check-out
+                        </li>
+                      </ul>
+                    </details>
+                  </div>
+                  <div>
+                    <a
+                      href="#"
+                      class="btn btn-primary host_reservation_request_button_decline"
+                      id="host_existing_reservation_btn_decline5"
+                      style="padding: 8px"
+                      >Cancel</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="card w-100 mb-4">
+                <div class="card-body d-flex justify-content-between">
+                  <div>
+                    <h5
+                      class="card-title font-weight-bold reservation_card_title"
+                    >
+                      The Capella Ubud retreat
+                    </h5>
+                    <h6 class="reservation_card_location">
+                      Location: Bali, Indonesia
+                    </h6>
+                    <a
+                      class="fw-semibold host_pending_reservation_view_property_link"
+                      href="property_page_after_pending.html"
+                      >View property</a
+                    >
+                    <details class="mt-2 host_pending_reservation_details">
+                      <summary
+                        class="fw-semibold text-decoration-underline host_pending_reservation_summary"
+                      >
+                        See details
+                      </summary>
+                      <ul class="list-group">
+                        <li class="list-group-item">
+                          Host Name: Mira North
+                          <a
+                            class="fw-semibold host_pending_reservation_customer_profile_link"
+                            href="customer_viewable_profile_cannot_review.html"
+                            ><i class="fa fa-user fa-lg" aria-hidden="true"></i
+                          ></a>
+                        </li>
+                        <li class="list-group-item">
+                          Request date: 8 January 2023, 12:32 PM
+                        </li>
+                        <li class="list-group-item">
+                          Dates requested: 3 April 2023 - 5 April 2023
+                        </li>
+                        <li class="list-group-item">
+                          Special accommodation Request: None
+                        </li>
+                        <li class="list-group-item">
+                          Special notes from customer: None
+                        </li>
+                        <li class="list-group-item">
+                          <i class="fa fa-check fa-lg" aria-hidden="true"></i>
+                          Customers are aware of 3:00 PM check-in and 11:00 AM
+                          check-out policy
+                        </li>
+                      </ul>
+                    </details>
+                  </div>
+                  <div>
+                    <a
+                      href="#"
+                      class="btn btn-primary host_reservation_request_button_decline"
+                      id="host_existing_reservation_btn_decline6"
+                      style="padding: 8px"
+                      >Cancel</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div
+                class="fw-bold d-flex align-items-center justify-content-between"
+              >
+                <div class="invisible-placeholder">
+                  <a
+                    href="#"
+                    class="btn btn-primary fw-semibold mb-2"
+                    style="display: none"
+                    >Previous</a
+                  >
+                </div>
+                <p>1/1</p>
+                <button
+                  type="button"
+                  class="btn btn-secondary fw-semibold mb-2"
+                  disabled
+                >
+                  Next
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- The footer -->
+    <footer>
+      <p>Copyright Restify 2023.</p>
+    </footer>
+
+    <script src="script2.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  </body>
+</html>

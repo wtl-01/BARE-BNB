@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking a Property</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="booking_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="node_modules/intl-tel-input/build/css/intlTelInput.css">
+    <link rel="stylesheet" href="header_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- The header -->
+    <div class="container header">
+        <nav class="navbar navbar-expand-lg">
+            <a href="home_page_after.html" class="navbar-brand">
+                <img src="images/logo.png" alt="Restify logo" width="60" height="40" class="d-inline-block align-bottom">
+                <span style="color: #ff5a5f; font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif; font-weight: bold;">
+                    Restify
+                </span>
+            </a>
+  
+            <span class="dropdown2">
+                <input type="text" name="" placeholder="Search" class="home_page_search form-inline">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <div class="dropdown-content2" style="width: 300px;">
+                    <div style="margin-left: 10px; margin-top: 20px; margin-bottom: 20px;">
+                    Region: 
+                    <select id="region-select" style="border-radius: 0.5em;">
+                        <option value="anywhere">Anywhere</option>
+                        <option value="europe">Europe</option>
+                        <option value="united-states">United States</option>
+                        <option value="south-america">South America</option>
+                        <option value="mexico">Mexico</option>
+                        <option value="caribbean">Caribbean</option>
+                        <option value="caribbean">East Asia</option>
+                      </select>
+                      <script>
+                          document.getElementById("region-select").value
+                      </script>
+                    </div>
+                    <div style="margin-left: 10px; margin-top: 20px; margin-bottom: 20px;">
+                        <label for="start-date">Start Date:</label>
+                        <input type="date" id="start-date" style="border-radius: 0.5em; border-width: thin;">      
+                    </div>
+                    <div style="margin-left: 10px; margin-top: 20px; margin-bottom: 20px;">
+                        <label for="start-date">End Date:</label>
+                        <input type="date" id="start-date" style="border-radius: 0.5em; border-width: thin;">        
+                    </div>
+  
+                    <div style="margin-left: 10px; margin-top: 20px; margin-bottom: 20px;">
+                        Order By: 
+                        <select id="region-select" style="border-radius: 0.5em;">
+                            <option value="anywhere">Random</option>
+                            <option value="europe">Highest Price</option>
+                            <option value="europe">Lowest Price</option>
+                            <option value="united-states">Rating</option>
+                            <option value="south-america">Popularity</option>
+                          </select>
+                          <script>
+                              document.getElementById("region-select").value
+                          </script>
+                        </div>
+  
+                    <button id="myButton" style="margin-bottom: 20px; border-radius: 0.5em; width: 200px; margin-left: 30px;"><a href="ordered_property_after.html" style="text-decoration: none;"> <i class="fa-solid fa-magnifying-glass"></i> Apply Filters</a></button>
+  
+                </div>
+            </span>
+  
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#toggleMobileMenu"
+                aria-controls="toggleMobileMenu"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+  
+            <div class="collapse navbar-collapse" id="toggleMobileMenu">
+                <span class="navbar-nav ms-auto text-center">
+                    <!-- profile edit -->
+                    <span class="dropdown2">
+                        <a href="#"><img src="images/random_guy.jpg" style="border-radius: 50%; width: 40px; height: 40px; margin-right: 10px;"></a>
+                        <div class="dropdown-content2">
+                            <div style="margin-bottom: 5px;">JackSmith12, Host</div>
+                            <img src="images/random_guy.jpg" style="border-radius: 50%; width: 100px; height: 100px; margin-bottom: 10px;">
+                            <div style="color: gray">Toronto, Ontario</div>
+                            <div style="color: gray">Jacksmith12@gmail.com</div>
+                            <div style="margin-top: 10px; margin-bottom: 10px;">Hi, I'm Jack! I own several properties across the GTA, please, be my guest!</div>
+                            <a href="demo_persons_profile.html"><i class="fa-solid fa-user"></i> <div>Edit Profile</div></a>
+                        </div>
+                    </span>
+                    <!-- property list -->
+                    <span style="margin-left: 20px; margin: 10px;">
+                        <a href="user_management_page.html" style="font-weight: lighter; text-decoration: none; color: gray;"><i class="fa-solid fa-house" style="color:#ff5a5f;"></i> Dashboard</a>
+                    </span>
+                    <!-- notifications -->
+                        <span class="dropdown" style="margin-left: 20px; margin: 10px;">
+                            <a href="#" style="font-weight: lighter; text-decoration: none; color:gray"><i class="fa-solid fa-bell" style="color: #ff5a5f;"></i> Notifications</a>
+                            <div class="dropdown-content">
+                                <a href="property_page_after_approved.html"><i class="fa-solid fa-square-check"></i><div>Your reservation of Hawaii Home has been approved!</div></a>
+                                <a href="host_property_page_after.html#reviews"><i class="fa-solid fa-comment"></i><div>Edward recently commented on Oakville Home</div></a>
+                                <a href="host_property_page_after.html#reviews"><i class="fa-solid fa-comment"></i><div>Asuna recently commented on Oakville Home</div></a>
+                                <a href="host_pending_reservation_requests.html"><i class="fa-solid fa-calendar"></i><div>Bob wants to reserve your property Oakville Home</div></a>
+                            </div>
+                        </span>
+                        <!-- logout -->
+                        <span style="margin-left: 20px; margin: 10px;">
+                            <a href="index.html" style="font-weight: lighter; text-decoration: none; color: gray;"><i class="fa-solid fa-right-from-bracket" style="color: #ff5a5f;"></i> Log Out</a>
+                        </span>
+                </span>
+            </div>
+        </nav>
+    </div>
+  
+    <hr id="horizontal_line_1_home_page">
+
+    <!-- main content -->
+    <main class="home_page_main">
+        <div class="bookingpagebox">
+
+            <div class="DataEntry">
+                <form class="bookingform" method="post" novalidate>
+                    <div class="spacer">
+                        <h3>Enter Guest Details:</h3>
+                    </div>
+                    <div class="spacer">
+                        <h4>Contact Information: </h4>
+                        <div class="row">
+                            <div class="form-group">
+                                <label for="Email1">Email address</label>
+                                <input type="email" class="form-control" id="Email1"
+                                    aria-describedby="emailHelp" placeholder="Enter email">
+                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with
+                                    anyone
+                                    else.</small>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="PhoneInput" style="display:block">Phone Number: </label>
+                                    <input type="tel" class="form-control" id="PhoneInput"
+                                        aria-describedby="emailHelp" placeholder="Eg: 416-967-1111">
+                                </div>
+                                <script src="node_modules/intl-tel-input/build/js/intlTelInput.js"></script>
+                                <script>
+                                    var input = document.querySelector("#PhoneInput");
+                                    window.intlTelInput(input, {
+                                        separateDialCode: true
+                                    });
+                                </script>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="prefctct">Preferred Contact Method:</label>
+                                    <select class="form-control" id="prefctct">
+                                        <option value="EMAIL">Email</option>
+                                        <option value="PHONE">Phone</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="Firstname">First Name</label>
+                                    <input type="text" class="form-control" id="FirstName"
+                                        placeholder="First Name">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="LName">Last Name</label>
+                                    <input type="text" class="form-control" id="LName"
+                                        placeholder="Last Name">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="spacer">
+                        <h4>Billing Address: </h4>
+                        <div class="row">
+                            <div class="form-group">
+                                <label for="Addrln1">Address Line 1</label>
+                                <input type="email" class="form-control" id="Addrln1" aria-describedby="emailHelp"
+                                    placeholder="Eg: 1 Seventh Heaven Blvd">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group">
+                                <label for="Addrln2">Address Line 2</label>
+                                <input type="email" class="form-control" id="Addrln2" aria-describedby="emailHelp"
+                                    placeholder="Eg: Sector Seven Slums">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="citysrc">City</label>
+                                    <input type="email" class="form-control" id="citysrc" aria-describedby="emailHelp"
+                                        placeholder="Eg: Midgar">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="ProvinceFormInput">Province:</label>
+                                    <select class="form-control" id="ProvinceFormInput">
+                                        <option value="NULL">Select Province</option>
+                                        <option value="AB">Alberta</option>
+                                        <option value="BC">British Columbia</option>
+                                        <option value="MB">Manitoba</option>
+                                        <option value="NL">Newfoundland and Labrador</option>
+                                        <option value="NB">New Brunswich</option>
+                                        <option value="NT">Northern Territories</option>
+                                        <option value="NS">Nova Scotia</option>
+                                        <option value="NV">Nunavut</option>
+                                        <option value="ON">Ontario</option>
+                                        <option value="PE">Prince Edward Island</option>
+                                        <option value="QC">Quebec</option>
+                                        <option value="SK">Saskatchewan</option>
+                                        <option value="YT">Yukon</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="CtryFormInput">Country:</label>
+                                    <select class="form-control" id="CtryFormInput">
+                                        <option value="NULL">Select Country</option>
+                                        <option value="CAN">Canada</option>
+                                        <option value="USA">United States</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="postcode">Postal Code</label>
+                                    <input type="email" class="form-control" id="postcode" aria-describedby="emailHelp"
+                                        placeholder="Eg: S7R 1F3">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="spacer">
+                        <h3>Payment Method:</h3>
+                        <p>You'll be redirected to a third party site to handle payment.</p>
+                    </div>
+                    <div class="spacer">
+                        <h3>Consent and Privacy:</h3>
+                        <p>We take safeguarding your personal information seriously. To learn more about how we use your
+                            personal information, please visit our <a href="privacy.html">Privacy Policy</a> page.</p>
+                        <div class="input-group">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
+                                <label class="form-check-label" for="exampleCheck1">I agree to the terms and conditions
+                                    of the
+                                    Restify Service.</label>
+                                <div class="invalid-feedback">
+                                    Please Agree to our Terms and Conditions.
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!--<button type="submit" class="btn btn-primary">Submit Booking Request</button>-->
+                </form>
+                <a href="property_page_after_pending.html" class="btn btn-primary">Submit Booking Request</a>
+
+                <script>
+                    (function () {
+                        // Bootstrap provided starter code
+                        // 
+                        'use strict';
+                        window.addEventListener('load', function () {
+                            var forms = document.getElementsByClassName('bookingform');
+                            var validation = Array.prototype.filter.call(forms, function (form) {
+                                form.addEventListener('submit', function (event) {
+                                    if (form.checkValidity() === false) {
+                                        event.preventDefault();
+                                        event.stopPropagation();
+                                    }
+                                    form.classList.add('was-validated');
+                                }, false);
+                            });
+                        }, false);
+                    })();
+                </script>
+            </div>
+            <div class="propertyInfo">
+                <div class="card">
+                    <div class="row gy-7">
+                        <img src="images/interior2.png" class="card-img img-fluid rounded-start" alt="spanish house">
+                    </div>
+                    <div class="row gy-7">
+                        <div class="card-body d-flex flex-column">
+                            <div class="h-100">
+                                <h4 class="card-title" style="color: grey;">Valencia, Spain</h4>
+                                <h2 class="card-title">Spanish Mediterranean Retreat</h2>
+                                <p class="card-text">
+                                    This Spanish retreat is located only 5 kilometers from the center of Valencia. Located near the beach, you can enjoy the hot sun while swimming in the beautiful blue ocean. The property is also located near many restaurants, enjoy Spanish cuisine such as Tapas and many more. Valencia is a city known for its architecture, culture, and rich history. There is an endless amount of things that you can do there, sightseeing, eating, walking, going to the beach, the possibilities are endless. The property itself has Moorish influence and has the design of a mosque's interior as a homage to Spain's Islamic past. The property comes with 1 bedroom and 1 bathroom and is suitable for 2 guests, perfect for a couple's honeymoon!
+                                </p>
+                                <h4 class="card-title mb-3"><strong>Price: </strong><span style="color: grey;">CAD
+                                        $299/night (Discount!)</span></h4>
+
+                            </div>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h4>Your Booking Information:</h4>
+                            <div class="h-100">
+                                <p class="card-text"><strong>Number of Guests: </strong><span style="color: grey;">
+                                        3</span></p>
+                                <p class="card-text"><strong>From: </strong><span style="color: grey;">Feb 12,
+                                        2023</span></p>
+                                <p class="card-text"><strong>To: </strong><span style="color: grey;">Feb 14,
+                                        2023</span></p>
+                                <p class="card-text"><strong>Net Cost: </strong><span style="color: grey;">CAD
+                                        $490.00</span></p>
+                                <p class="card-text"><strong>Cleaning Fees: </strong><span style="color: grey;">CAD
+                                        $110.00</span></p>
+                                <p class="card-text"><strong>Taxes (GST 5%): </strong><span style="color: grey;">CAD
+                                        $30.00</span></p>
+                                <p class="card-text"><strong>Total Cost: </strong><span style="color: grey;">CAD
+                                        $630.00</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+    <!-- The footer -->
+    <footer>
+        <p>Copyright Restify 2023.</p>
+    </footer>
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
+
+</body>
+
+</html>

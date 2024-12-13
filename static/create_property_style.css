@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body{
+    min-height: 100vh;
+}
+
+.home_page_search {
+    height: 40px;
+    width: 250px;
+    border-radius: 30px;
+}
+
+#horizontal_line_1_home_page{
+    margin: 0px;
+}
+  
+  body {
+    background-color: white;
+  }
+  
+  .nav_sign_up,
+  .nav_sign_in {
+    margin-left: -150px;
+    margin-right: -150px;
+  }
+  
+  .signup_container {
+    margin-top: 50px;
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;
+  }
+  
+  .signin_container {
+    margin-top: 120px;
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;
+  }
+  
+  .button_format_sign_in,
+  .button_format_sign_up {
+    background-color: #ff5a5f;
+    border-color: #ff5a5f;
+  }
+  
+  .button_format_sign_in:hover,
+  .button_format_sign_up:hover {
+    background-color: #ff5a5f;
+    border-color: #ff5a5f;
+  }
+  
+  .btn-success:active:focus {
+    background-color: #00a699;
+    border-color: #00a699;
+  }
+
+  .host_reservation_request_button_approve {
+    background-color: white;
+    border-color: #ff5a5f;
+    color: #ff5a5f;
+    border: 2px solid;
+    border-radius: 10px;
+    margin-left: 30px;
+    margin-top: 10px;
+  }
+  
+  .host_reservation_request_button_approve:hover {
+    background-color: #ff5a5f;
+    border-color: #ff5a5f;
+    color: white;
+  }
+  
+  .host_reservation_request_button_approve:active:focus {
+    background-color: white;
+    border-color: #ff5a5f;
+    color: #ff5a5f;
+  }
+
+  .home-page-main {
+    display: flex;
+    margin: 1rem;
+    padding: 1rem;
+  }
+
+  .main_container {
+    display: flex;
+    padding: 1rem;
+  }
+
+  footer {   
+    color: grey;  
+    height: 3rem;  
+    display: flex;  
+    align-items: center;  
+    justify-content: center;  
+    font-size: 15px;  
+    position: sticky;
+    top: 100%;
+    border: 1px solid lightgray;
+} 
+
+@media only screen and (max-width: 1150px) {
+  .col {
+    width: 100%;
+    margin-top: 0;
+    text-align: left;
+  } 
+
+  .col-sm-5 {
+    width: 100%;
+  }
+
+  .col-7 {
+    width: 100%;
+  }
+}
+  

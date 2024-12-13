@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+
+    <!-- Add the Bootstrap CSS file -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <!-- Add the Bootstrap JavaScript file -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- CSS file -->
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="stylesheet" href="header_style.css">
+    
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  </head>
+  <body>
+
+
+    <div class="container header">
+      <nav class="navbar navbar-expand-lg">
+          <a href="home_page_after.html" class="navbar-brand">
+              <img src="images/logo.png" alt="Restify logo" width="60" height="40" class="d-inline-block align-bottom">
+              <span style="color: #ff5a5f; font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif; font-weight: bold;">
+                  Restify
+              </span>
+          </a>
+
+          <span class="dropdown2">
+              <input type="text" name="" placeholder="Search" class="home_page_search form-inline">
+              <div class="dropdown-content2" style="width: 300px;">
+                  <div style="margin-left: 10px; margin-top: 20px; margin-bottom: 20px;">
+                  Region: 
+                  <select id="region-select" style="border-radius: 0.5em;">
+                      <option value="anywhere">Anywhere</option>
+                      <option value="europe">Europe</option>
+                      <option value="united-states">United States</option>
+                      <option value="south-america">South America</option>
+                      <option value="mexico">Mexico</option>
+                      <option value="caribbean">Caribbean</option>
+                      <option value="caribbean">East Asia</option>
+                    </select>
+                    <script>
+                        document.getElementById("region-select").value
+                    </script>
+                  </div>
+                  <div style="margin-left: 10px; margin-top: 20px; margin-bottom: 20px;">
+                      <label for="start-date">Start Date:</label>
+                      <input type="date" id="start-date" style="border-radius: 0.5em; border-width: thin;">      
+                  </div>
+                  <div style="margin-left: 10px; margin-top: 20px; margin-bottom: 20px;">
+                      <label for="start-date">End Date:</label>
+                      <input type="date" id="start-date" style="border-radius: 0.5em; border-width: thin;">        
+                  </div>
+
+                  <div style="margin-left: 10px; margin-top: 20px; margin-bottom: 20px;">
+                      Order By: 
+                      <select id="region-select" style="border-radius: 0.5em;">
+                          <option value="anywhere">Random</option>
+                          <option value="europe">Highest Price</option>
+                          <option value="europe">Lowest Price</option>
+                          <option value="united-states">Rating</option>
+                          <option value="south-america">Popularity</option>
+                        </select>
+                        <script>
+                            document.getElementById("region-select").value
+                        </script>
+                      </div>
+
+                  <button id="myButton" style="margin-bottom: 20px; border-radius: 0.5em; width: 200px; margin-left: 30px;"><a href="ordered_property_after.html" style="text-decoration: none;"> <i class="fa-solid fa-magnifying-glass"></i> Apply Filters</a></button>
+
+              </div>
+          </span>
+
+          <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#toggleMobileMenu"
+              aria-controls="toggleMobileMenu"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+          >
+              <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="toggleMobileMenu">
+              <span class="navbar-nav ms-auto text-center">
+                  <!-- profile edit -->
+                  <span class="dropdown2">
+                      <a href="#"><img src="images/random_guy.jpg" style="border-radius: 50%; width: 40px; height: 40px; margin-right: 10px;"></a>
+                      <div class="dropdown-content2">
+                          <div style="margin-bottom: 5px;">JackSmith12, Host</div>
+                          <img src="images/random_guy.jpg" style="border-radius: 50%; width: 100px; height: 100px; margin-bottom: 10px;">
+                          <div style="color: gray">Toronto, Ontario</div>
+                          <div style="color: gray">Jacksmith12@gmail.com</div>
+                          <div style="margin-top: 10px; margin-bottom: 10px;">Hi, I'm Jack! I own several properties across the GTA, please, be my guest!</div>
+                          <a href="demo_persons_profile.html"><i class="fa-solid fa-user"></i> <div>Edit Profile</div></a>
+                      </div>
+                  </span>
+                  <!-- property list -->
+                  <span style="margin-left: 20px; margin: 10px;">
+                      <a href="user_management_page.html" style="font-weight: lighter; text-decoration: none; color: gray;"><i class="fa-solid fa-house" style="color:#ff5a5f;"></i> Dashboard</a>
+                  </span>
+                  <!-- notifications -->
+                      <span class="dropdown" style="margin-left: 20px; margin: 10px;">
+                          <a href="#" style="font-weight: lighter; text-decoration: none; color:gray"><i class="fa-solid fa-bell" style="color: #ff5a5f;"></i> Notifications</a>
+                          <div class="dropdown-content">
+                              <a href="property_page_after_approved.html"><i class="fa-solid fa-square-check"></i><div>Your reservation of Hawaii Home has been approved!</div></a>
+                              <a href="host_property_page_after.html#reviews"><i class="fa-solid fa-comment"></i><div>Edward recently commented on Oakville Home</div></a>
+                              <a href="host_property_page_after.html#reviews"><i class="fa-solid fa-comment"></i><div>Asuna recently commented on Oakville Home</div></a>
+                              <a href="host_pending_reservation_requests.html"><i class="fa-solid fa-calendar"></i><div>Bob wants to reserve your property Oakville Home</div></a>
+                          </div>
+                      </span>
+                      <!-- logout -->
+                      <span style="margin-left: 20px; margin: 10px;">
+                          <a href="index.html" style="font-weight: lighter; text-decoration: none; color: gray;"><i class="fa-solid fa-right-from-bracket" style="color: #ff5a5f;"></i> Log Out</a>
+                      </span>
+              </span>
+          </div>
+      </nav>
+  </div>
+
+  <hr id="horizontal_line_1_home_page">
+    <main>
+      <div
+        class="container d-flex align-items-center justify-content-center"
+        style="min-height: 100vh; height: 100%"
+      >
+        <div class="row">
+          <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+            <div class="container">
+              <div class="fs-1 fw-bold">Personal Info</div>
+
+              <div class="card">
+                <div class="card-body">
+                  <div class="img_profile_container">
+                    <img
+                      class="image_profile"
+                      src="images_customer_profile/Jenni_profile_pic.png"
+                      alt="Avatar"
+                    />
+                  </div>
+
+                  <div class="Legal_name_container">
+                    <p class="fs-5 legal_name_profile">Legal Name</p>
+                    <p class="actual_legal_name_profile">Elizabeth Smith</p>
+                  </div>
+
+                  <hr />
+
+                  <div class="email_address_container">
+                    <p class="fs-5">Email Address</p>
+                    <p class="email_profile">E***h@gmail.com</p>
+                  </div>
+                  <hr />
+
+                  <div class="phone_number_container">
+                    <p class="fs-5">Phone Number</p>
+                    <p class="phone_number_profile">+1 ***-***-1234</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+            <div class="container">
+              <div
+                class="container d-flex align-items-center justify-content-between"
+              >
+                <div class="fs-2 fw-bold">Reviews by hosts</div>
+                <div>
+                  <button
+                    type="button"
+                    class="btn btn-primary customer_viewable_profile_review_button"
+                    data-toggle="modal"
+                    data-target="#Modal2"
+                  >
+                    Review
+                  </button>
+
+                  <div
+                    class="modal fade"
+                    id="Modal2"
+                    tabindex="-1"
+                    role="dialog"
+                    aria-labelledby="Modal2Label"
+                    aria-hidden="true"
+                  >
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title">Leave a review</h5>
+                          <button
+                            type="button"
+                            class="close"
+                            data-dismiss="modal"
+                            aria-label="Close"
+                          >
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="form-group">
+                            <label for="ratingInput">Enter a rating:</label>
+                            <div class="d-flex align-items-center">
+                              <input
+                                type="number"
+                                class="form-control"
+                                id="ratingInput"
+                                min="1"
+                                max="5"
+                              />
+                              <div class="ml-2">
+                                <i
+                                  class="fa fa-star-o fa-lg"
+                                  aria-hidden="true"
+                                ></i>
+                              </div>
+                            </div>
+                          </div>
+                          <textarea
+                            class="customer_viewable_profile_textarea"
+                            name=""
+                            id=""
+                            rows="10"
+                          ></textarea>
+                        </div>
+
+                        <div class="modal-footer">
+                          <button
+                            type="button"
+                            class="btn btn-secondary customer_viewable_profile_all_reviews_button"
+                            data-dismiss="modal"
+                          >
+                            Close
+                          </button>
+
+                          <a
+                            href="customer_viewable_profile_after_adding_review.html"
+                            class="btn btn-primary customer_viewable_profile_review_button"
+                            >Save changes</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="fs-4 d-flex align-items-center justify-content-center mt-2"
+              >
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star-half-o" aria-hidden="true"></i>
+              </div>
+              <div
+                class="fs-5 d-flex align-items-center justify-content-center mt-2"
+              >
+                <p>(8 reviews)</p>
+              </div>
+
+              <hr />
+
+              <!-- The host reviews -->
+              <div class="row ml-2">
+                <div
+                  class="container d-flex align-items-center justify-content-start"
+                >
+                  <img
+                    class="customer_viewable_profile_host_pics"
+                    src="images_customer_profile/IU_profile_pic.png"
+                  />
+                  <span class="ml-2"> Nefertiti Jagger </span>
+                </div>
+
+                <span style="color: grey; font-size: 15px; margin-left: 5px">
+                  January 1, 2023
+                </span>
+                <div
+                  class="fs-4 d-flex align-items-center justify-content-center"
+                >
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                </div>
+                <div class="mt-2">
+                  I had the pleasure of hosting Elizabeth and her family, and I
+                  must say they were excellent guests. They were very respectful
+                  of my property and kept the place spotless throughout their
+                  stay. Communication with Elizabeth was easy and she was very
+                  prompt with responding to any questions I had. Check-in and
+                  check-out were seamless. I highly recommend Elizabeth and her
+                  family as guests and would love to host them again in the
+                  future.
+                </div>
+              </div>
+
+              <div class="row ml-2 mt-2">
+                <div
+                  class="container d-flex align-items-center justify-content-start"
+                >
+                  <img
+                    class="customer_viewable_profile_host_pics"
+                    src="images_customer_profile/JK_profile_pic.png"
+                  />
+                  <span class="ml-2">Jairus Thorne</span>
+                </div>
+                <span style="color: grey; font-size: 15px; margin-left: 5px">
+                  January 2, 2023
+                </span>
+                <div
+                  class="fs-4 d-flex align-items-center justify-content-center"
+                >
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                </div>
+                <div class="mt-2">
+                  I had the privilege of hosting Elizabeth and his partner for a
+                  weekend getaway and I must say they were fantastic guests.
+                  They were very respectful of my property and kept it in great
+                  condition. Amanda was great with communication, making sure
+                  she had all the information she needed before their arrival.
+                  The check-in and check-out process was smooth and effortless.
+                  I highly recommend Amanda and his partner and would love to
+                  host them again in the future.
+                </div>
+              </div>
+
+              <div
+                class="d-flex align-content-center justify-content-end mt-2 mb-2"
+              >
+                <button
+                  type="button"
+                  class="btn btn-primary customer_viewable_profile_all_reviews_button"
+                  data-toggle="modal"
+                  data-target="#Modal1"
+                >
+                  See all reviews
+                </button>
+
+                <div
+                  class="modal fade"
+                  id="Modal1"
+                  tabindex="-1"
+                  role="dialog"
+                  aria-labelledby="ModalLabel"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title">Reviews by hosts</h5>
+                        <button
+                          type="button"
+                          class="close"
+                          data-dismiss="modal"
+                          aria-label="Close"
+                        >
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="row ml-2">
+                          <div
+                            class="container d-flex align-items-center justify-content-start"
+                          >
+                            <img
+                              class="customer_viewable_profile_host_pics"
+                              src="images_customer_profile/IU_profile_pic.png"
+                            />
+                            <span class="ml-2"> Nefertiti Jagger </span>
+                          </div>
+                          <span
+                            style="
+                              color: grey;
+                              font-size: 15px;
+                              margin-left: 5px;
+                            "
+                          >
+                            January 1, 2023
+                          </span>
+                          <div
+                            class="fs-4 d-flex align-items-center justify-content-center"
+                          >
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                          </div>
+
+                          <div class="mt-2">
+                            I had the pleasure of hosting Elizabeth and her
+                            family, and I must say they were excellent guests.
+                            They were very respectful of my property and kept
+                            the place spotless throughout their stay.
+                            Communication with Elizabeth was easy and she was
+                            very prompt with responding to any questions I had.
+                            Check-in and check-out were seamless. I highly
+                            recommend Elizabeth and her family as guests and
+                            would love to host them again in the future.
+                          </div>
+                        </div>
+
+                        <div class="row ml-2 mt-3">
+                          <div
+                            class="container d-flex align-items-center justify-content-start"
+                          >
+                            <img
+                              class="customer_viewable_profile_host_pics"
+                              src="images_customer_profile/JK_profile_pic.png"
+                            />
+                            <span class="ml-2">Jairus Thorne</span>
+                          </div>
+                          <span
+                            style="
+                              color: grey;
+                              font-size: 15px;
+                              margin-left: 5px;
+                            "
+                          >
+                            January 2, 2023
+                          </span>
+                          <div
+                            class="fs-4 d-flex align-items-center justify-content-center"
+                          >
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                          </div>
+                          <div class="mt-2">
+                            I had the privilege of hosting Elizabeth and his
+                            partner for a weekend getaway and I must say they
+                            were fantastic guests. They were very respectful of
+                            my property and kept it in great condition. Amanda
+                            was great with communication, making sure she had
+                            all the information she needed before their arrival.
+                            The check-in and check-out process was smooth and
+                            effortless. I highly recommend Amanda and his
+                            partner and would love to host them again in the
+                            future.
+                          </div>
+                        </div>
+
+                        <div class="row ml-2 mt-3">
+                          <div
+                            class="container d-flex align-items-center justify-content-start"
+                          >
+                            <img
+                              class="customer_viewable_profile_host_pics"
+                              src="images_customer_profile/Lisa_profile_pic.png"
+                            />
+                            <span class="ml-2"> Lysandra Nimbus </span>
+                          </div>
+                          <span
+                            style="
+                              color: grey;
+                              font-size: 15px;
+                              margin-left: 5px;
+                            "
+                          >
+                            January 3, 2023
+                          </span>
+                          <div
+                            class="fs-4 d-flex align-items-center justify-content-center"
+                          >
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                          </div>
+                          <div class="mt-2">
+                            I recently hosted Elizabeth and her family and I
+                            couldn't have asked for better guests. They were
+                            very polite, friendly, and considerate. The property
+                            was kept in perfect condition and they even left a
+                            nice note before they left. Communication was easy
+                            and smooth throughout their stay. I would highly
+                            recommend Elizabeth.
+                          </div>
+                        </div>
+
+                        <div class="row ml-2 mt-3">
+                          <div
+                            class="container d-flex align-items-center justify-content-start"
+                          >
+                            <img
+                              class="customer_viewable_profile_host_pics"
+                              src="images_customer_profile/Rose_profile_pic.png"
+                            />
+                            <span class="ml-2">Xanthe Cordelia</span>
+                          </div>
+                          <span
+                            style="
+                              color: grey;
+                              font-size: 15px;
+                              margin-left: 5px;
+                            "
+                          >
+                            January 4, 2023
+                          </span>
+                          <div
+                            class="fs-4 d-flex align-items-center justify-content-center"
+                          >
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                          </div>
+                          <div class="mt-2">
+                            I had the pleasure of hosting Elizabeth and her
+                            friends for a girls' weekend and I must say they
+                            were fantastic guests. They were very respectful of
+                            my property and kept it in great condition.
+                            Elizabeth was easy to communicate with and made sure
+                            she had all the information she needed before their
+                            arrival. The check-in and check-out process was
+                            smooth and effortless. I highly recommend Elizabeth
+                            and her friends to any other host and would be happy
+                            to host them again in the future.
+                          </div>
+                        </div>
+                        <div class="row ml-2 mt-3">
+                          <div
+                            class="container d-flex align-items-center justify-content-start"
+                          >
+                            <img
+                              class="customer_viewable_profile_host_pics"
+                              src="images_customer_profile/Jisoo_profile_pic.png"
+                            />
+                            <span class="ml-2"> Kael Solace </span>
+                          </div>
+                          <span
+                            style="
+                              color: grey;
+                              font-size: 15px;
+                              margin-left: 5px;
+                            "
+                          >
+                            January 5, 2023
+                          </span>
+                          <div
+                            class="fs-4 d-flex align-items-center justify-content-center"
+                          >
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                          </div>
+                          <div class="mt-2">
+                            I recently hosted Elizabeth and her partner and I
+                            must say they were amazing guests. They were very
+                            friendly, considerate, and respectful of my
+                            property. The place was kept in pristine condition
+                            and they even left it cleaner than when they
+                            arrived. Communication was easy and smooth
+                            throughout their stay. I highly recommend Elizabeth
+                            and her partner as guests and would love to host
+                            them again in the future.
+                          </div>
+                        </div>
+
+                        <div class="row ml-2 mt-3">
+                          <div
+                            class="container d-flex align-items-center justify-content-start"
+                          >
+                            <img
+                              class="customer_viewable_profile_host_pics"
+                              src="images_customer_profile/RM_profile_pic.png"
+                            />
+                            <span class="ml-2">Zaraquxi Yancey</span>
+                          </div>
+                          <span
+                            style="
+                              color: grey;
+                              font-size: 15px;
+                              margin-left: 5px;
+                            "
+                          >
+                            January 6, 2023
+                          </span>
+                          <div
+                            class="fs-4 d-flex align-items-center justify-content-center"
+                          >
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                          </div>
+                          <div class="mt-2">
+                            My recent guests, Elizabeth and her partner, were a
+                            true delight to host. They were polite, friendly,
+                            and considerate of my property. The place was left
+                            spotless, and they even left a thoughtful note
+                            before their departure. Communication was easy and
+                            efficient throughout their stay. I highly recommend
+                            Elizabeth and her partner as guests, and I'd be
+                            thrilled to host them again in the future.
+                          </div>
+                        </div>
+                        <div class="row ml-2 mt-3">
+                          <div
+                            class="container d-flex align-items-center justify-content-start"
+                          >
+                            <img
+                              class="customer_viewable_profile_host_pics"
+                              src="images_customer_profile/V_profile_pic.png"
+                            />
+                            <span class="ml-2"> Phineas Atlas </span>
+                          </div>
+                          <span
+                            style="
+                              color: grey;
+                              font-size: 15px;
+                              margin-left: 5px;
+                            "
+                          >
+                            January 7, 2023
+                          </span>
+                          <div
+                            class="fs-4 d-flex align-items-center justify-content-center"
+                          >
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                          </div>
+                          <div class="mt-2">
+                            I recently had the honor of hosting Elizabeth and
+                            her friends, and they were fantastic guests. They
+                            were very respectful of my home and kept it in great
+                            condition. Elizabeth was a breeze to communicate
+                            with and made sure to have all the necessary
+                            information ahead of time. Check-in and check-out
+                            were smooth and easy. I highly recommend Jane and
+                            her friends to any host and would be delighted to
+                            have them as guests again.
+                          </div>
+                        </div>
+
+                        <div class="row ml-2 mt-3">
+                          <div
+                            class="container d-flex align-items-center justify-content-start"
+                          >
+                            <img
+                              class="customer_viewable_profile_host_pics"
+                              src="images_customer_profile/JHope_profile_pic.png"
+                            />
+                            <span class="ml-2">Kairos Symphony</span>
+                          </div>
+                          <span
+                            style="
+                              color: grey;
+                              font-size: 15px;
+                              margin-left: 5px;
+                            "
+                          >
+                            January 8, 2023
+                          </span>
+                          <div
+                            class="fs-4 d-flex align-items-center justify-content-center"
+                          >
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                          </div>
+                          <div class="mt-2">
+                            I recently hosted Elizabeth and her family, and they
+                            were a joy to have as guests. They were polite,
+                            friendly, and considerate of my home. The place was
+                            left in pristine condition, and they even left it
+                            cleaner than when they arrived. Elizabeth was easy
+                            to communicate with, making the entire process
+                            seamless. I highly recommend Elizabeth and her
+                            family to any host and would be happy to have them
+                            stay again in the future."
+                          </div>
+                        </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button
+                          type="button"
+                          class="btn btn-secondary customer_viewable_profile_all_reviews_button"
+                          data-dismiss="modal"
+                        >
+                          Close
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- The footer -->
+    <footer>
+      <p>Copyright Restify 2023.</p>
+    </footer>
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  </body>
+</html>

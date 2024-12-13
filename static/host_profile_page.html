@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manage Your Property</title>
+    
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="booking_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="node_modules/intl-tel-input/build/css/intlTelInput.css">
+    <link rel="stylesheet" href="header_style.css">
+    
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- The header -->
+    <div class="container header">
+        <nav class="navbar navbar-expand-lg">
+            <a href="home_page_after.html" class="navbar-brand">
+                <img src="images/logo.png" alt="Restify logo" width="60" height="40" class="d-inline-block align-bottom">
+                <span style="color: #ff5a5f; font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif; font-weight: bold;">
+                    Restify
+                </span>
+            </a>
+  
+            <span class="dropdown2">
+                <input type="text" name="" placeholder="Search" class="home_page_search form-inline">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <div class="dropdown-content2" style="width: 300px;">
+                    <div style="margin-left: 10px; margin-top: 20px; margin-bottom: 20px;">
+                    Region: 
+                    <select id="region-select" style="border-radius: 0.5em;">
+                        <option value="anywhere">Anywhere</option>
+                        <option value="europe">Europe</option>
+                        <option value="united-states">United States</option>
+                        <option value="south-america">South America</option>
+                        <option value="mexico">Mexico</option>
+                        <option value="caribbean">Caribbean</option>
+                        <option value="caribbean">East Asia</option>
+                      </select>
+                      <script>
+                          document.getElementById("region-select").value
+                      </script>
+                    </div>
+                    <div style="margin-left: 10px; margin-top: 20px; margin-bottom: 20px;">
+                        <label for="start-date">Start Date:</label>
+                        <input type="date" id="start-date" style="border-radius: 0.5em; border-width: thin;">      
+                    </div>
+                    <div style="margin-left: 10px; margin-top: 20px; margin-bottom: 20px;">
+                        <label for="start-date">End Date:</label>
+                        <input type="date" id="start-date" style="border-radius: 0.5em; border-width: thin;">        
+                    </div>
+  
+                    <div style="margin-left: 10px; margin-top: 20px; margin-bottom: 20px;">
+                        Order By: 
+                        <select id="region-select" style="border-radius: 0.5em;">
+                            <option value="anywhere">Random</option>
+                            <option value="europe">Highest Price</option>
+                            <option value="europe">Lowest Price</option>
+                            <option value="united-states">Rating</option>
+                            <option value="south-america">Popularity</option>
+                          </select>
+                          <script>
+                              document.getElementById("region-select").value
+                          </script>
+                        </div>
+  
+                    <button id="myButton" style="margin-bottom: 20px; border-radius: 0.5em; width: 200px; margin-left: 30px;"><a href="ordered_property_after.html" style="text-decoration: none;"> <i class="fa-solid fa-magnifying-glass"></i> Apply Filters</a></button>
+  
+                </div>
+            </span>
+  
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#toggleMobileMenu"
+                aria-controls="toggleMobileMenu"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+  
+            <div class="collapse navbar-collapse" id="toggleMobileMenu">
+                <span class="navbar-nav ms-auto text-center">
+                    <!-- profile edit -->
+                    <span class="dropdown2">
+                        <a href="#"><img src="images/random_guy.jpg" style="border-radius: 50%; width: 40px; height: 40px; margin-right: 10px;"></a>
+                        <div class="dropdown-content2">
+                            <div style="margin-bottom: 5px;">JackSmith12, Host</div>
+                            <img src="images/random_guy.jpg" style="border-radius: 50%; width: 100px; height: 100px; margin-bottom: 10px;">
+                            <div style="color: gray">Toronto, Ontario</div>
+                            <div style="color: gray">Jacksmith12@gmail.com</div>
+                            <div style="margin-top: 10px; margin-bottom: 10px;">Hi, I'm Jack! I own several properties across the GTA, please, be my guest!</div>
+                            <a href="demo_persons_profile.html"><i class="fa-solid fa-user"></i> <div>Edit Profile</div></a>
+                        </div>
+                    </span>
+                    <!-- property list -->
+                    <span style="margin-left: 20px; margin: 10px;">
+                        <a href="user_management_page.html" style="font-weight: lighter; text-decoration: none; color: gray;"><i class="fa-solid fa-house" style="color:#ff5a5f;"></i> Dashboard</a>
+                    </span>
+                    <!-- notifications -->
+                        <span class="dropdown" style="margin-left: 20px; margin: 10px;">
+                            <a href="#" style="font-weight: lighter; text-decoration: none; color:gray"><i class="fa-solid fa-bell" style="color: #ff5a5f;"></i> Notifications</a>
+                            <div class="dropdown-content">
+                                <a href="property_page_after_approved.html"><i class="fa-solid fa-square-check"></i><div>Your reservation of Hawaii Home has been approved!</div></a>
+                                <a href="host_property_page_after.html#reviews"><i class="fa-solid fa-comment"></i><div>Edward recently commented on Oakville Home</div></a>
+                                <a href="host_property_page_after.html#reviews"><i class="fa-solid fa-comment"></i><div>Asuna recently commented on Oakville Home</div></a>
+                                <a href="host_pending_reservation_requests.html"><i class="fa-solid fa-calendar"></i><div>Bob wants to reserve your property Oakville Home</div></a>
+                            </div>
+                        </span>
+                        <!-- logout -->
+                        <span style="margin-left: 20px; margin: 10px;">
+                            <a href="index.html" style="font-weight: lighter; text-decoration: none; color: gray;"><i class="fa-solid fa-right-from-bracket" style="color: #ff5a5f;"></i> Log Out</a>
+                        </span>
+                </span>
+            </div>
+        </nav>
+    </div>
+  
+    <hr id="horizontal_line_1_home_page">
+
+    <!-- main content -->
+    <main class="d-flex home_page_main">
+      <div class="d-flex main-container" style="padding: 1rem">
+        <div class="Host-Information" style="padding: 1rem">
+          <h3>Your Host Profile:</h3>
+          <div class="card" style="width: 18rem">
+            <img
+              class="card-img-top"
+              src="images_customer_profile/Random_guy_profile_pic.png"
+              alt="Host Name"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Jack Smith</h5>
+              <p class="card-text">
+                Hi! I own a bunch of properties around the GTA.
+              </p>
+              <ul class="list-group list-group-flush">
+                <li
+                  class="list-group-item fa fa-envelope-o"
+                  style="font-family: sans-serif"
+                >
+                  Email: J***h@gmail.com
+                </li>
+                <li
+                  class="list-group-item fa fa-address-card"
+                  style="font-family: sans-serif"
+                >
+                  Cell: +1 ***-***-1234
+                </li>
+                <li
+                  class="list-group-item fa fa-eye-slash"
+                  style="font-family: sans-serif"
+                >
+                  Password: ****************
+                </li>
+              </ul>
+              <a href="demo_persons_profile.html" class="btn btn-primary"
+                >Edit Profile</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="d-inline-block List-Of-Properties" style="padding: 1rem">
+          <h3>Your Properties:</h3>
+          <a
+            href="host_property_page_after.html"
+            style="text-decoration: none; color: inherit"
+          >
+            <div class="card">
+              <div class="row g-0">
+                <div class="col-6 col-md-5">
+                  <img
+                    src="images/oakville1.png"
+                    class="card-img img-fluid rounded-start"
+                    alt="oakville house"
+                  />
+                </div>
+                <div class="col-6 col-md-7">
+                  <div class="card-body d-flex flex-column">
+                    <div class="h-100">
+                      <h4 class="card-title" style="color: grey">Canada</h4>
+                      <h2 class="card-title">Oakville Lakeshore House</h2>
+                      <p class="card-text">
+                        Escape to luxury and serenity at this stunning lakefront
+                        property in Oakville! Enjoy breathtaking views of Lake
+                        Ontario from your very own piece of paradise. This
+                        spacious and modern home is perfect for families,
+                        friends, and couples looking for a peaceful escape from
+                        the city. Relax in the spacious and stylish interiors,
+                        equipped with all the amenities you need for a
+                        comfortable stay. Cook up a storm in the fully-equipped
+                        kitchen, lounge on the comfortable couch, or step
+                        outside and bask in the beauty of the lakefront. Wake up
+                        to the tranquil sounds of nature, and spend your days
+                        exploring the lush green surroundings. Take a dip in the
+                        lake, go for a bike ride, or simply lounge by the water
+                        and soak up the sun. With its prime location, this
+                        lakefront property offers the best of both worlds –
+                        peaceful seclusion and easy access to the city's vibrant
+                        shopping, dining, and cultural attractions. Book now for
+                        an unforgettable escape to Oakville!
+                      </p>
+                      <h4 class="card-title mb-3">
+                        $<strong>245</strong
+                        ><span style="color: grey">/night</span>
+                      </h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="create_property_page.html" class="btn btn-primary"
+            >Add a Property</a
+          >
+        </div>
+      </div>
+    </main>
+
+    <!-- The footer -->
+    <footer>
+      <p>Copyright Restify 2023.</p>
+    </footer>
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  </body>
+</html>

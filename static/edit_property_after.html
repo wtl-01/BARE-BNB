@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="home_page_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="lightbox.min.css">
+    <script type="text/javascript" src="lightbox-plus-jquery.min.js"></script>
+
+</head>
+<body>
+
+    <!-- The header -->
+    <div class="container header">
+        <nav class="navbar navbar-expand-lg">
+            <a href="home_page_after.html" class="navbar-brand">
+                <img src="images/logo.png" alt="Restify logo" width="60" height="40" class="d-inline-block align-bottom">
+                <span style="color: #ff5a5f; font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif; font-weight: bold;">
+                    Restify
+                </span>
+            </a>
+
+            <span class="dropdown2">
+                <input type="text" name="" placeholder="Search" class="home_page_search form-inline">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <div class="dropdown-content2" style="width: 300px;">
+                    <div style="margin-left: 10px; margin-top: 20px; margin-bottom: 20px;">
+                    Region: 
+                    <select id="region-select" style="border-radius: 0.5em;">
+                        <option value="anywhere">Anywhere</option>
+                        <option value="europe">Europe</option>
+                        <option value="united-states">United States</option>
+                        <option value="south-america">South America</option>
+                        <option value="mexico">Mexico</option>
+                        <option value="caribbean">Caribbean</option>
+                        <option value="caribbean">East Asia</option>
+                      </select>
+                      <script>
+                          document.getElementById("region-select").value
+                      </script>
+                    </div>
+                    <div style="margin-left: 10px; margin-top: 20px; margin-bottom: 20px;">
+                        <label for="start-date">Start Date:</label>
+                        <input type="date" id="start-date" style="border-radius: 0.5em; border-width: thin;">      
+                    </div>
+                    <div style="margin-left: 10px; margin-top: 20px; margin-bottom: 20px;">
+                        <label for="start-date">End Date:</label>
+                        <input type="date" id="start-date" style="border-radius: 0.5em; border-width: thin;">        
+                    </div>
+  
+                    <div style="margin-left: 10px; margin-top: 20px; margin-bottom: 20px;">
+                        Order By: 
+                        <select id="region-select" style="border-radius: 0.5em;">
+                            <option value="anywhere">Random</option>
+                            <option value="europe">Highest Price</option>
+                            <option value="europe">Lowest Price</option>
+                            <option value="united-states">Rating</option>
+                            <option value="south-america">Popularity</option>
+                          </select>
+                          <script>
+                              document.getElementById("region-select").value
+                          </script>
+                        </div>
+  
+                    <button id="myButton" style="margin-bottom: 20px; border-radius: 0.5em; width: 200px; margin-left: 30px;"><a href="ordered_property_after.html" style="text-decoration: none;"> <i class="fa-solid fa-magnifying-glass"></i> Apply Filters</a></button>
+  
+                </div>
+            </span>
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#toggleMobileMenu"
+                aria-controls="toggleMobileMenu"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="toggleMobileMenu">
+                <span class="navbar-nav ms-auto text-center">
+                    <!-- profile edit -->
+                    <span class="dropdown2">
+                        <a href="#"><img src="images/random_guy.jpg" style="border-radius: 50%; width: 40px; height: 40px; margin-right: 10px;"></a>
+                        <div class="dropdown-content2">
+                            <div style="margin-bottom: 5px;">JackSmith12, Host</div>
+                            <img src="images/random_guy.jpg" style="border-radius: 50%; width: 100px; height: 100px; margin-bottom: 10px;">
+                            <div style="color: gray">Toronto, Ontario</div>
+                            <div style="color: gray">jacksmith12@gmail.com</div>
+                            <div style="margin-top: 10px; margin-bottom: 10px;">Hi, I'm Jack! I own several properties across the GTA, please, be my guest!</div>
+                            <a href="demo_persons_profile.html"><i class="fa-solid fa-user"></i> <div>Edit Profile</div></a>
+                        </div>
+                    </span>
+                    <!-- property list -->
+                    <span style="margin-left: 20px; margin: 10px;">
+                        <a href="user_management_page.html" style="font-weight: lighter; text-decoration: none; color: gray;"><i class="fa-solid fa-house" style="color:#ff5a5f;"></i> Dashboard</a>
+                    </span>
+                    <!-- notifications -->
+                        <span class="dropdown" style="margin-left: 20px; margin: 10px;">
+                            <a href="#" style="font-weight: lighter; text-decoration: none; color:gray"><i class="fa-solid fa-bell" style="color: #ff5a5f;"></i> Notifications</a>
+                            <div class="dropdown-content">
+                                <a href="property_page_after_approved.html"><i class="fa-solid fa-square-check"></i><div>Your reservation of Hawaii Home has been approved!</div></a>
+                                <a href="host_property_page_after.html#reviews"><i class="fa-solid fa-comment"></i><div>Edward recently commented on Oakville Home</div></a>
+                                <a href="host_property_page_after.html#reviews"><i class="fa-solid fa-comment"></i><div>Asuna recently commented on Oakville Home</div></a>
+                                <a href="host_pending_reservation_requests.html"><i class="fa-solid fa-calendar"></i><div>Bob wants to reserve your property Oakville Home</div></a>
+                            </div>
+                        </span>
+                        <!-- logout -->
+                        <span style="margin-left: 20px; margin: 10px;">
+                            <a href="index.html" style="font-weight: lighter; text-decoration: none; color: gray;"><i class="fa-solid fa-right-from-bracket" style="color: #ff5a5f;"></i> Log Out</a>
+                        </span>
+                </span>
+            </div>
+        </nav>
+    </div>
+
+    <hr id="horizontal_line_1_home_page">
+
+    <!-- main -->
+    <main>
+
+    <h3 style="margin-top: 10px; margin-left: 20px;">Edit Property</h3>
+    <div style="border: 1px solid lightgray; border-radius: 10px; margin-top: 10px; margin-left: 20px; margin-right: 20px;">
+        <div>
+            <div style="margin-top: 10px; margin-left: 20px;">Property Location: <input type="text" style="border-radius: 10px; width: 300px;" placeholder="Oakville, Ontario"></div>
+            <div style="margin-top: 20px; margin-left: 20px;">Property Name: <input type="text" style="border-radius: 10px; width: 300px;" placeholder="Oakville Lakeshore Home"></div>
+            
+            <h5 style="margin-left: 20px; margin-top: 30px;">Photos</h5>
+            <div>
+                <img id="selected-image" src="images/imageadd.png" height="200px" style="margin-left: 30px; margin-top: 20px; border-radius: 20px;">
+                <input type="file" id="image-selector" style="display:none">
+                <img id="selected-image2" src="images/imageadd.png" height="200px" style="margin-left: 30px; margin-top: 20px; border-radius: 20px;">
+                <input type="file" id="image-selector2" style="display:none">
+                <img id="selected-image3" src="images/imageadd.png" height="200px" style="margin-left: 30px; margin-top: 20px; border-radius: 20px;">
+                <input type="file" id="image-selector3" style="display:none">
+                <img id="selected-image4" src="images/imageadd.png" height="200px" style="margin-left: 30px; margin-top: 20px; border-radius: 20px;">
+                <input type="file" id="image-selector4" style="display:none">
+                <img id="selected-image5" src="images/imageadd.png" height="200px" style="margin-left: 30px; margin-top: 20px; border-radius: 20px;">
+                <input type="file" id="image-selector5" style="display:none">
+            </div>
+
+            <div style="margin-top: 20px; margin-left: 20px;">Email: <input type="text" style="border-radius: 10px; width: 300px" placeholder="jacksmith12@gmail.com"></div>
+            <div style="margin-top: 20px; margin-left: 20px;">Phone Number: <input type="text" style="border-radius: 10px; width: 150px;" placeholder="905-527-0134"></div>
+
+            <div style="margin-top: 20px; margin-left: 20px;">Number of Guests: <input type="number" name="number" value="2" min="1" max="20" style="border-radius: 10px;"></div>
+            <div style="margin-top: 20px; margin-left: 20px;">Number of Beds: <input type="number" name="number" value="5" min="1" max="20" style="border-radius: 10px;"></div>
+            <div style="margin-top: 20px; margin-left: 20px;">Number of Bedrooms: <input type="number" name="number" value="5" min="1" max="20" style="border-radius: 10px;"></div>
+            <div style="margin-top: 20px; margin-left: 20px;">Number of Bathrooms: <input type="number" name="number" value="3" min="1" max="20" style="border-radius: 10px;"></div>
+
+            <div style="margin-top: 20px; margin-left: 20px;"><span>Amenities: <i class="fa-solid fa-kitchen-set" style="margin-left: 10px;"></i> Kitchen<input type="checkbox" id="checkbox" style="margin-left: 10px;"checked></span>
+                <span><i class="fa-solid fa-wifi" style="margin-left: 20px;"></i> Wifi<input type="checkbox" id="checkbox" style="margin-left: 10px;"checked></span>
+                <div style="margin-left: 70px;">
+                <span><i class="fa-solid fa-car" style="margin-left: 20px;"></i> Parking<input type="checkbox" id="checkbox" style="margin-left: 10px;"checked></span>
+                <span><i class="fa-solid fa-bathtub" style="margin-left: 20px;"></i> Bathroom<input type="checkbox" id="checkbox" style="margin-left: 10px;"checked></span>
+                </div>
+                <div style="margin-left: 70px;">
+                <span><i class="fa-solid fa-tv" style="margin-left: 20px;"></i> HDTV<input type="checkbox" id="checkbox" style="margin-left: 10px;"checked></span>
+                <span><i class="fa-solid fa-swimmer" style="margin-left: 20px;"></i> Pool<input type="checkbox" id="checkbox" style="margin-left: 10px;"checked></span>
+                </div>
+                <div style="margin-left: 70px;">
+                <span><i class="fa-solid fa-wind" style="margin-left: 20px;"></i> Airconditioning<input type="checkbox" id="checkbox" style="margin-left: 10px;"></span>
+                </div>
+                <div style="margin-left: 70px;">
+                <span><i class="fa-solid fa-jug-detergent" style="margin-left: 20px;"></i> Laundry<input type="checkbox" id="checkbox" style="margin-left: 10px;"></span>
+                </div>
+                <div style="margin-left: 70px;">
+                <span><i class="fa-solid fa-smog" style="margin-left: 20px;"></i> Smoke Detector<input type="checkbox" id="checkbox" style="margin-left: 10px;"></span>
+                </div>
+            </div>
+
+            <div style="margin-top: 20px; margin-left: 20px; margin-bottom: 30px;"><span style="display: inline-block; vertical-align: top;">Property Description:</span> <textarea style="height: 200px; width:200px; border-radius: 10px;" placeholder="Escape to luxury and serenity at this stunning lakefront property in Oakville! Enjoy breathtaking views of Lake Ontario from your very own piece of paradise. This spacious and modern home is perfect for families, friends, and couples looking for a peaceful escape from the city. Relax in the spacious and stylish interiors, equipped with all the amenities you need for a comfortable stay. Cook up a storm in the fully-equipped kitchen, lounge on the comfortable couch, or step outside and bask in the beauty of the lakefront. Wake up to the tranquil sounds of nature, and spend your days exploring the lush green surroundings. Take a dip in the lake, go for a bike ride, or simply lounge by the water and soak up the sun. With its prime location, this lakefront property offers the best of both worlds – peaceful seclusion and easy access to the city's vibrant shopping, dining, and cultural attractions. Book now for an unforgettable escape to Oakville!"></textarea></div>
+            <button id="myButton" class="host_reservation_request_button_approve" style="margin-bottom: 30px;"><a href="editted_page_after.html" style="text-decoration: none; color: inherit">Apply Changes</a></button>
+        </div>
+    </div>
+
+    </main>
+
+    <!-- The footer -->
+    <footer style="margin-top: 20px;">  
+        <p>Copyright Restify 2023.</p>  
+    </footer>  
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="reply.js"></script>
+    <script>
+        document.getElementById("selected-image").addEventListener("click", function() {
+          document.getElementById("image-selector").click();
+        });
+        document.getElementById("image-selector").addEventListener("change", function() {
+          let image = document.getElementById("selected-image");
+          image.src = URL.createObjectURL(event.target.files[0]);
+        });
+
+        document.getElementById("selected-image2").addEventListener("click", function() {
+          document.getElementById("image-selector2").click();
+        });
+        document.getElementById("image-selector2").addEventListener("change", function() {
+          let image = document.getElementById("selected-image2");
+          image.src = URL.createObjectURL(event.target.files[0]);
+        });
+
+        document.getElementById("selected-image3").addEventListener("click", function() {
+          document.getElementById("image-selector3").click();
+        });
+        document.getElementById("image-selector3").addEventListener("change", function() {
+          let image = document.getElementById("selected-image3");
+          image.src = URL.createObjectURL(event.target.files[0]);
+        });
+
+        document.getElementById("selected-image4").addEventListener("click", function() {
+          document.getElementById("image-selector4").click();
+        });
+        document.getElementById("image-selector4").addEventListener("change", function() {
+          let image = document.getElementById("selected-image4");
+          image.src = URL.createObjectURL(event.target.files[0]);
+        });
+
+        document.getElementById("selected-image5").addEventListener("click", function() {
+          document.getElementById("image-selector5").click();
+        });
+        document.getElementById("image-selector5").addEventListener("change", function() {
+          let image = document.getElementById("selected-image5");
+          image.src = URL.createObjectURL(event.target.files[0]);
+        });
+      </script>
+    
+</body>
+</html>

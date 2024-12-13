@@ -1,0 +1,104 @@
+body{
+    min-height: 100vh;
+}
+
+.home_page_search {
+    height: 40px;
+    width: 250px;
+    border-radius: 30px;
+}
+
+#horizontal_line_1_home_page{
+    margin: 0px;
+}
+
+.home_page_main {
+    margin: 20px;
+}
+
+.bookingpagebox {
+    display: flex;
+    justify-content: space-around;
+}
+
+.propertyInfo {
+    max-width: 33%;
+    padding: 1rem;
+}
+
+.spacer {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+
+.data_entry{
+    display: inline-block;
+    max-width: 66%;
+    padding: 1rem;
+}
+
+.registrationform {
+    padding: 1rem;
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-bottom-right-radius: 0px;
+}
+
+.next_button {
+    background-color: #ff5a5f;
+    color: white;
+    font-family: sans-serif;
+    border-radius: 30px;
+    border: none;
+    height: 30px;
+    width: 100px;
+    margin-top: 20px;
+}
+
+.next_button_div {
+    display: flex;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 660px) {
+    .col {
+      width: 100%;
+      margin-top: 0;
+      text-align: left;
+    } 
+
+    .propertyInfo {
+        max-width: 100%;
+    }
+
+    .data_entry {
+        max-width: 100%;
+    }
+
+    .bookingpagebox {
+        flex-direction: column-reverse;
+    }
+}
+
+
+.iti__flag {background-image: url("node_modules/intl-tel-input/build/img/flags.png");}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .iti__flag {background-image: url("node_modules/intl-tel-input/build/img/flags@2x.png");}
+}
+
+footer {   
+    color: grey;  
+    height: 3rem;  
+    display: flex;  
+    align-items: center;  
+    justify-content: center;  
+    font-size: 15px;  
+    position: sticky;
+    top: 100%;
+    border: 1px solid lightgray;
+} 
